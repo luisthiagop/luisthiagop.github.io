@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teste de lógica</title>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+	<div id="formulario">
+		<h2>Teste schaffen</h2>
+		<table>
+		<tr>
+			<th>Tamanho da horta</th>
+			<td><input type="number" name="tamanho_x" id="tamanho_x" value="5">x<input type="number" name="tamanho_y" id="tamanho_y" value="6"></td>
+		</tr>
+		<tr>
+			<th>Posição inicial do robô</th>
+			<td><input type="number" name="inicio_x" id="inicio_x" value="3">x<input type="number" name="inicio_y" id="inicio_y" value="2"></td>
+		</tr>
+		<tr>
+			<th>Orientação inicial do robô</th>
+			<td><input type="text" name="orientacao_inicio" id="orientacao_inicio" value="N"></td>
+		</tr>
+		<tr>
+			<th>Lista de canteiros a irrigar</th>
+			<td>
+				<textarea rows="8" cols="20" id="lista_irrigar">
+				5,1
+				5,5
+				3,4
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<th></th>	 
+			<td>
+				<button onclick="getValues()">Calcular</button>
+			</td>
+		</tr>
+		<tr>
+			<th>String resultado</th>
+			<td>
+				<input type="text" id="string_result"></div>
+			</td>
+		</tr>
+		<tr>
+			<th>Orientação final</th>
+			<td>
+				<input type="text" id="orientacao_result"></div>
+			</td>
+		</tr>
+		</table>
+
+
+<hr>
+		<div>
+			<h4>Ajuda</h4>
+			<p>Para os campos de posições usar apenas valores inteiros positivos;</p>
+			<p>Para o campo de orientação inicial usar apenas valores N,S,L,O;</p>
+			<p>Para a lista de canteiros usar apenas valores inteiros separados por virgula e qubra de linha;</p>
+			<p>Após o cálculo é possível ver o trajeto do robô clicando em desenhar. Essa função funciona melhor com hortas quadradas com dimensões maior 3.</p>
+
+		</div>
+	</div>
+
+	
+	<div>
+		<button id="btn_desenhar" diabled onclick="desenhar_horta()">desenhar</button>
+		<canvas id="cnv" width="650" height="650" style="border:0px solid #000000;">
+			
+		</canvas>
+	</div>
+
+
+
+</body>
+</html>

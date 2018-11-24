@@ -1,0 +1,13 @@
+*{
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+body{
+	background-color: #F3f3f3
+}
+#formulario{
+	float:left;
+	width: 650px;
+}
+#btn_desenhar{
+	display: none;
+}
